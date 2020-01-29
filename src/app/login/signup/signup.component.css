@@ -1,0 +1,54 @@
+.loginLabel {
+    border-right:1px solid wheat 
+}
+.row{
+     margin: 2%; 
+    
+}
+.newuser{
+    display: flex;
+    justify-content: center;
+}
+.formControlName{
+    width : 100%
+}
+/* .loginbtn {
+    margin: inherit
+} */
+
+.centertext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body {
+    background-color: #03065f;
+    color:wheat;
+    border: 1px solid darkblue;
+    box-shadow: 5px 5px darkgrey;
+}
+.loginbtn{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    color: wheat;
+}
+
+.cnfpasswrd{
+    padding-right: 13px;
+}
+.modal-dialog{
+    max-width: 50%
+}
+.signup{
+    padding-right: 13px;
+    padding-left: 13px;
+}
+
+.invalid-feedback{
+    display: block;
+    color: #a90616;
+}

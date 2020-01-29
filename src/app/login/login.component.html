@@ -1,0 +1,50 @@
+<!-- <div class="modal" id="login"> -->
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-body modalbody">
+
+            <div class="container p-0">
+                <div class="row">
+                    <div class="col-md loginLabel centertext ">
+                        <label for=""> Login</label>
+
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <form action="" class="formGroup" [formGroup]="loginform">
+                                <div class="userId" class="row">
+                                    <div class="col-md-6">
+                                        <label for="">User Id : </label>
+                                    </div>
+                                    <div class="col-md-6 px-0">
+                                        <input type="text" class="formControlName" formControlName="userid">
+                                    </div>
+                                </div>
+                                <div class="password" class="row">
+                                    <div class="col-md-6">
+                                        <label for="">Password : </label>
+                                    </div>
+                                    <div class="col-md-6 px-0">
+                                        <input type="password" class="formControlName" formControlName="password">
+                                    </div>
+                                </div>
+                                <div class="row loginbtn">
+                                    <div class="col-md loginbtn">
+                                        <button type="submit" class="btn btn-success" (click)="login()"> login</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row newuser">
+                            <a routerLink="signup">New User? Sign up here</a>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- </div> -->

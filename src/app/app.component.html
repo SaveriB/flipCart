@@ -1,0 +1,89 @@
+<div class="container-fluid">
+  <div class="row navbackground m-0 fixed-top">
+    <div class="col-md-5">
+      <div class="row  tab-padding">
+        <div class="col-md-3 pointer tab-padding storename" routerLink="/home" routerLinkActive="highlightTab">
+         
+          Tara's Store
+          <!-- </a> -->
+        </div>
+        <div class="col-md-3 tab-padding pointer" routerLink="/product-list" routerLinkActive="highlightTab">Products</div>
+        <div class="col-md-3 tab-padding pointer" routerLink="/admin" routerLinkActive="highlightTab">Admin</div>
+        <div class="col-md-3 tab-padding pointer" routerLinkActive="highlightTab">Contacts</div>
+      </div>
+    </div>
+    <!-- <div class="col-md-2">    
+  </div> -->
+    <div class="col-md-2 offset-md-5 tab-padding">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="tab-padding pointer" routerLink="/login" routerLinkActive="highlightTab">Login</div>
+        </div>
+        <div class="col-md-6">
+          <!-- <a routerLink="/mycart" class="navbar-brand navbar-right mycart"> -->
+          <i class="fa fa-shopping-cart pointer" routerLink="/mycart"></i>
+          <!-- </a> -->
+          <label for="" class="cartCount">{{cartItemCount!=0 ? cartItemCount : ''}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
+<!-- <router-outlet></router-outlet> -->
+<!-- <div class="container-fluid"> -->
+
+</div>
+
+<router-outlet></router-outlet>
+<footer>
+  <div class="container footer-container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Address</h3>
+        <ul class="list-unstyled quick-links">
+          <li> TCS Synergy park </li>
+          <li> Indian Immunologicals Colony, Gachibowli </li>
+          <li> Hyderabad, Telangana 500032 </li>
+          <li> <a href=""> View on map </a> </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3>Quick Links</h3>
+        <ul class="list-unstyled quick-links">
+          <li> <a href="" class="anchor pointer" routerLink="/home"> <i class="fa fa-angle-double-right"></i>  Home</a> </li>
+          <li> <a href="" class="anchor pointer"> <i class="fa fa-angle-double-right"></i>  About</a> </li>
+          <li> <a href="" class="anchor pointer"> <i class="fa fa-angle-double-right"></i>  Contact us</a></li>
+        </ul>
+      </div>
+      <!-- <div class="col-md-4">
+        <h3>Quick Links</h3>
+        <ul class="list-unstyled quick-links">
+          <li> <a href="" class="anchor pointer" routerLink="/home"> <i class="fa fa-angle-double-right"></i>  Home</a> </li>
+          <li> <a href="" class="anchor pointer"> <i class="fa fa-angle-double-right"></i>  About</a> </li>
+          <li> <a href="" class="anchor pointer"> <i class="fa fa-angle-double-right"></i>  Contact us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>Quick Links</h3>
+        <ul class="list-unstyled quick-links">
+          <li> <a href="" class="anchor pointer" routerLink="/home"> <i class="fa fa-angle-double-right"></i>  Home</a> </li>
+          <li> <a href="" class="anchor pointer"> <i class="fa fa-angle-double-right"></i>  About</a> </li>
+          <li> <a href="" class="anchor pointer"> <i class="fa fa-angle-double-right"></i>  Contact us</a></li>
+        </ul>
+      </div> -->
+      
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+        <ul class="list-unstyled list-inline social text-center">
+          <li class="list-inline-item"><i class="fa fa-facebook pointer"></i></li>
+          <li class="list-inline-item"><i class="fa fa-twitter pointer"></i></li>
+          <li class="list-inline-item"><i class="fa fa-instagram pointer"></i></li>
+          <li class="list-inline-item"><i class="fa fa-google-plus pointer"></i></li>
+          <li class="list-inline-item"><i class="fa fa-envelope pointer"></i></li>
+        </ul>
+      </div>
+      <hr>
+    </div>
+  </div>
+</footer>

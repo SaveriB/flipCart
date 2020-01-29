@@ -1,0 +1,103 @@
+<div class="modal-dialog">
+
+    <div class="modal-content">
+        <div class="modal-body modalbody">
+
+            <div class="container p-0">
+                <div class="row">
+                    <div class="col-md loginLabel centertext ">
+                        <label for=""> Sign up</label>
+
+                    </div>
+                    <div class="col-md-9 signup">
+                        <div class="row">
+                            <form action="" class="formGroup" [formGroup]="signupform">
+                                <div class="userId" class="row">
+                                    <div class="col-md-6">
+                                        <label for="">Name : </label>
+                                    </div>
+                                    <div class="col-md-6 px-0">
+                                        <input type="text" class="formControlName px-1" formControlName="name">
+                                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                                <div *ngIf="f.name.errors.required" >Name is required</div>
+                                                <div *ngIf="f.name.errors.maxlength" >Max length is 8</div>
+                                                <div *ngIf="f.name.errors.minlength" >Min length is 3</div>
+
+                                            </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="userId" class="row">
+                                    <div class="col-md-6">
+                                        <label for="">Email id : </label>
+                                    </div>
+                                    <div class="col-md-6 px-0">
+                                        <input type="text" class="formControlName px-1" formControlName="emailid">
+                                        <div *ngIf="submitted && f.emailid.errors" class="invalid-feedback">
+                                            <div *ngIf="f.emailid.errors.required" >Email id is required</div>
+                                            <div *ngIf="f.emailid.errors.email" >Email id is invalid</div>
+                                            <!-- <div *ngIf="f.name.errors.minlength" >Min length is 3</div> -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="userId" class="row">
+                                    <div class="col-md-6">
+                                        <label for="">User Id : </label>
+                                    </div>
+                                    <div class="col-md-6 px-0">
+                                        <input type="text" class="formControlName px-1" formControlName="userid">
+                                        <div *ngIf="submitted && f.userid.errors " class="invalid-feedback">
+                                                <div *ngIf=" f.userid.errors.required">userid id is required</div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="password" class="row">
+                                    <div class="col-md-6">
+                                        <label for="">Password : </label>
+                                    </div>
+                                    <div class="col-md-6 px-0">
+                                        <input type="password" class="formControlName px-1" formControlName="password">
+                                        <div *ngIf="submitted && f.password.errors " class="invalid-feedback">
+                                                <div *ngIf=" f.password.errors.required">password id is required</div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="cnfpassword" class="row">
+                                    <div class="col-md-6">
+                                        <label for="">Confirm Password : </label>
+                                    </div>
+                                    <div class="col-md-6 px-0">
+                                        <input type="password" class="formControlName cnfpasswrd px-1" formControlName="cnfpassword">
+                                        <div *ngIf="submitted && f.cnfpassword.errors " class="invalid-feedback">
+                                                <div *ngIf=" f.cnfpassword.errors.required">cnfpassword id is required</div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="userId" class="row">
+                                    <div class="col-md-6">
+                                        <label for="">Contact No : </label>
+                                    </div>
+                                    <div class="col-md-6 px-0">
+                                        <input type="number" class="formControlName px-1" formControlName="contactno">
+                                        <div *ngIf="submitted && f.contactno.errors " class="invalid-feedback">
+                                                <div *ngIf=" f.contactno.errors.required">contactno id is required</div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="row loginbtn">
+                                    <div class="col-md loginbtn">
+                                        <button type="submit" class="btn btn-success" (click)="signup()"> sign up</button>
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                        <div class="row newuser">
+                            <a routerLink="/../login">Already signed up? login here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

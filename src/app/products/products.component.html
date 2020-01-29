@@ -1,0 +1,102 @@
+<div class="myProducts">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3  " *ngFor="let product of allproducts">
+                <div class="card-deck">
+                    <div class="card">
+
+                        <!-- <div class="card-header">
+                            <label for="">{{product.name}}</label>
+                        </div> -->
+                        <!-- <div class="card-body" () [routerLink]="['product-details',product.id]" [product]="product"> -->
+                        <div class="card-body pointer" (click)="showproduct(product)" data-toggle="modal" data-target="#productdetailsmodal">
+                            <img src="{{product.imgpath}}" alt="" class="productImage">
+                            <!-- <div class="overlay">
+                                    <h2>Hover effect 1</h2>
+                                   
+                                 </div> -->
+                        </div>
+                        <div class="card-footer">
+                            <label for="" class="productname pointer" >{{product.name}}</label>
+                            <!-- <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                            </div> -->
+                            <div class="price">
+                                <label for="">Rs.{{product.price}}/-</label>
+                            </div>
+                            <div class="addprod">
+                                    <div class="row">
+                                            <div class="col-md-3  sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='S'}" (click)="selectsize('S')">S</div>
+                                            <div class="col-md-3 sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='M'}" (click)="selectsize('M')">M</div>
+                                            <div class="col-md-3 sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='L'}" (click)="selectsize('L')">L</div>
+                                            <div class="col-md-3 sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='XL'}" (click)="selectsize('XL')">XL</div>
+                                            
+
+                                        </div>
+                                        <div class="addtocartbtn">
+                                                <button class="btn btn-success btn-sm" (click)="addtocart(product)">Add to Cart</button> 
+
+                                        </div>
+                                        <!-- <div class="row">
+                                            <div class="col-md"> -->
+                                            <!-- </div>
+                                        </div> -->
+                                       
+                            </div>
+                            <!-- <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#sizemodal" >Add to Cart</button> -->
+                          
+                           
+
+                            <!-- <div class="modal sizem" id="sizemodal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">Select your size</div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-2  sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='S'}" (click)="selectsize('S')">S</div>
+                                                <div class="col-md-2 sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='M'}" (click)="selectsize('M')">M</div>
+                                                <div class="col-md-2 sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='L'}" (click)="selectsize('L')">L</div>
+                                                <div class="col-md-2 sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='XL'}" (click)="selectsize('XL')">XL</div>
+                                               <a href="" style="font-size:15px;">size chart </a>   
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="view overlay zoom">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(131).jpg" class="img-fluid " alt="smaple image">
+                <div class="mask flex-center">
+                    <p class="white-text">Zoom effect</p>
+                </div>
+            </div>
+
+
+
+        <div *ngIf="showmodal" class="modal" id="productdetailsmodal">
+            <div class="modal-dialog">
+
+
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                        <button type="button" class="close">&times;</button>
+                    </div> -->
+                    <div class="modal-body">
+
+                        <app-product-details [product]="productD" (closing)="productdetailsclosed($event)"></app-product-details>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <app-product-details [product]="productD"></app-product-details> -->
+    </div>
+</div>

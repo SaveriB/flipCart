@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Cart Items</div>
+                <div class="card-body"  >
+                    <div *ngIf="cartItems.length>0; else noItem">
+                    <div class="row" *ngFor="let item of cartItems; let i = index">
+                        <div class="col-md-3">
+                            <img class="itemimage" src="{{item.imgpath}}" alt="">
+                            <hr>
+                        </div>
+                        <div class="col-md-6">
+                            {{item.name}}
+                            <hr>
+                        </div>
+                        <div class="col-md-3">
+                            <button (click)="removefromcart(item,i)">Remove from cart</button>
+                            <hr>
+                        </div>                        
+                    </div>                  
+                </div>
+                <ng-template #noItem>Your cart is empty <i class="fa fa-frown-o" aria-hidden="true"></i> </ng-template>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- <div class="row">
+                <form action="">
+                    <div class="form-row">
+                        <div class="form-group"></div>
+                    </div>
+                </form>
+            </div> -->
+           
+            <div class="row">
+                <div class="col-md">Price Details</div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">Bag Total</div>
+                <div class="col-md-6">873475</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">Delivery Charges</div>
+                <div class="col-md-6">Free</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">Coupon discount</div>
+                <div class="col-md-6">-6778</div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">Total</div>
+                <div class="col-md-6">876778</div>
+            </div>
+            <button routerLink="/checkout" > Place Order </button>
+        </div>
+    </div>
+</div>

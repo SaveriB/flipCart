@@ -1,0 +1,84 @@
+<!-- <div class="container"> -->
+<div class="card">
+    <div class="card-body">
+            <button type="button" class="close" (click)="closedetails()" data-dismiss="modal"
+            data-backdrop="false" data-keyboard="false">&times;</button>
+        <div class="row p-2">
+            <div class="col-md-5 imgb ">
+                <div class="imgborder">
+                    <img src="{{product.imgpath}}" alt="">
+                </div>
+
+            </div>
+            <div class="col-md-7">
+                <div>
+                    <div class=" row p-1">
+                        <div class=" col-md-4 ">
+                            <label class="prodname" for="">{{product.name}}</label>
+                            
+                        </div>
+                        <div class="col-md-8 ">
+                                <div class="rating">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                            <div class="md">
+                                <label class="price" for="">₹{{product.price}}</label>
+                                
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                                <div class="md">
+                                    <label class="quantitylabel" for="">Quantity</label>
+                                    </div>
+                                    <div class="md">
+                                    <input class="quantityinput" [(ngModel)]="quantity" type="number" required value="1">
+                                </div>
+                            </div>
+                    <div class="row p-1">
+                        <div class="md">
+                            <label for="">{{product.Desc}}</label>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-md-3" style="
+                        text-align:  center;">
+                            <label for="">Size :</label>
+                        </div>
+                        <!-- <div class="md"> -->
+                                <div class="col-md-2  sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='S'}" (click)="selectsize('S')">S</div>
+                                <div class="col-md-2 sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='M'}" (click)="selectsize('M')">M</div>
+                                <div class="col-md-2 sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='L'}" (click)="selectsize('L')">L</div>
+                                <div class="col-md-2 sizeButton pointer" [ngClass]="{'sizeselected' : product.size=='XL'}" (click)="selectsize('XL')">XL</div>
+                               <a href="" style="font-size:15px;">size chart </a>  
+                        <!-- </div> -->
+                        <div *ngIf="submitted &&  !sizeselected " class="invalid-feedback">
+                                <div *ngIf="!sizeselected" class="error" >Select a size</div>
+                            </div>
+                        
+
+                    </div>
+                    <div class="row p-1">
+                            <div *ngIf="!addedtocart" class="col-md-6">
+                            <button class="btn btn-success" (click)="addtocart(product)">Add to Cart</button>
+                            </div>
+                            <div *ngIf="addedtocart" class="col-md-6">
+                                    <button class="btn btn-success"  data-dismiss="modal" (click)="goToCart()">Go to cart</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+<!-- </div> -->

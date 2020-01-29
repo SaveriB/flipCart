@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <label>
+            Hello Admin..... Welcome to your store!!!!!!!!!
+        </label>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <button class="addproduct pointer" data-toggle="modal" data-target="#addproduct">Add Product</button>
+            <!-- <div class="container-fluid"> -->
+            <div class="modal" id="addproduct">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            Please enter the product details
+                        </div>
+                        <div class="modal-body">
+                            <form action="" class="form-group" [formGroup]="addprodform">
+                                <div class="row form-group">
+                                        <div class="col-md-4 ">
+                                    <label for="">Name :</label>
+                                            </div>
+
+                                   <div class="col-md-8 "> 
+                                    <input type="text" class="form-control" formControlName="productname">
+                                   </div> 
+                                </div>
+                                <div class="row form-group">
+                                        <div class="col-md-4 "> 
+                                    <label for="">Description :</label>
+                                    </div>
+                                    <div class="col-md-8 "> 
+                                    <input class="form-control" formControlName="productdesc">
+                                     </div> 
+                                </div>
+                                <div class="row form-group">
+                                        <div class="col-md-4 "> 
+                                    <label for="">Price : </label>
+                                    </div>
+
+                                     <div class="col-md-8 "> 
+                                    <input type="number" class="form-control quantityInput" formControlName="productprice">
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group">
+                                    <label for="">Available Size :</label>
+                                    <label class="form-check-label"> S </label>
+                                    <input type="checkbox" class="form-check-input" formControlName="productsizes">
+                                    <label class="form-check-label"> M </label>
+                                    <input type="checkbox" class="form-check-input" formControlName="productsizem">
+                                    <label class="form-check-label"> L </label>
+                                    <input type="checkbox" class="form-check-input" formControlName="productsizel">
+                                    <label class="form-check-label"> XL </label>
+                                    <input type="checkbox" class="form-check-input" formControlName="productsizexl">
+                                </div> -->
+                                <div class="row form-group">
+                                        <div class="col-md-4 "> 
+                                    <label for="">Available quantity :</label>
+                                            </div>
+                                     <div class="col-md-8 "> 
+                                    <input type="number" class="form-control quantityInput" formControlName="productquantity">
+                                     </div> 
+                                </div>
+                                <div class="row">
+
+                                    <a>Select image</a>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md submitLabel">
+                                        <button type="submit" data-dismiss="modal" class="btn btn-success mr-1" (click)="save()"> Submit</button>
+                                        <button type="button" class="btn btn-secondary"    data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</div>

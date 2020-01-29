@@ -1,0 +1,57 @@
+.welocomemsg {
+    text-align: center;
+}
+
+ .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  /* .carousel {
+    width: 60%;
+    margin-left: 17%;
+  } */
+
+  
+.offer{
+  display: flex;
+  justify-content: center;
+}
+.celebimage{
+width: 100%;
+}
+
+/* .router {
+  position: relative;
+} */
+
+.off{
+
+}
+
+.fashion{
+  text-align: center;
+  padding-top: 10%;
+  padding-right: 4%;
+  font-family: cursive;
+  background-color: antiquewhite;
+}
+
+.offimg {
+  /* width: 120px;
+  text-align: center; */
+  -webkit-transition: transform .4s; /* For Safari 3.1 to 6.0 */
+  transition: transform .4s;
+}
+.offimg:hover {
+  -ms-transform: scale(1.008); /* IE 9 */
+  -webkit-transform: scale(1.008); /* Safari 3-8 */
+  transform: scale(1.008); 
+}
+.offrow{
+    margin-top: 1%;
+    margin-bottom: 1%
+}
+
+.pointer{
+  cursor: pointer;
+}

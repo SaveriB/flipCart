@@ -1,0 +1,18 @@
+.labelcol{
+    text-align: right;
+}
+
+.submitLabel {
+    border-right:1px solid wheat; 
+    text-align: right;
+}
+
+/* .quantityInput{
+    width: 30%;
+   
+} */
+input {
+    display: inline;
+    /* width:50%; */
+    /* margin-left: 10%; */
+}
